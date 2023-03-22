@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:marz08/src/pages/botones_page.dart';
+import 'package:marz08/src/pages/imagenes_page.dart';
 import 'package:marz08/src/pages/lista2_page.dart';
 import './src/pages/home_page.dart';
 import './src/pages/listas_page.dart';
@@ -28,6 +30,10 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const ListasPage());
           case '/list2':
             return MaterialPageRoute(builder: (context) => const Lista2Page());
+          case '/buttons':
+            return MaterialPageRoute(builder: (context) => const BotonesPage());
+          case '/images':
+            return MaterialPageRoute(builder: (context) => const ImagesPage());
           default:
             return MaterialPageRoute(builder: (context) => const HomePage());
         }

@@ -14,10 +14,40 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
             onPressed: (){
               //Navegacion a la pagina de listas
-              Navigator.of(context).pushNamed('/list2');
+              Navigator.of(context).pushNamed('/list');
             }, 
             child: const Text(
               'Listas',
+               style: TextStyle(fontSize: 30),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              //Navegacion a la pagina de listas
+              Navigator.of(context).pushNamed('/list2');
+            }, 
+            child: const Text(
+              'Lista 2',
+               style: TextStyle(fontSize: 30),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              //Navegacion a la pagina de listas
+              Navigator.of(context).pushNamed('/buttons');
+            }, 
+            child: const Text(
+              'Botones',
+               style: TextStyle(fontSize: 30),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              //Navegacion a la pagina de listas
+              Navigator.of(context).pushNamed('/images');
+            }, 
+            child: const Text(
+              'Imagenes',
                style: TextStyle(fontSize: 30),
             ),
           ),
