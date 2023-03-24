@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marz08/src/pages/botones_page.dart';
 import 'package:marz08/src/pages/imagenes_page.dart';
 import 'package:marz08/src/pages/lista2_page.dart';
+import 'package:marz08/src/pages/page_argumentos.dart';
 import './src/pages/home_page.dart';
 import './src/pages/listas_page.dart';
 
@@ -15,12 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: HomePage(),
-        ),
+      home: HomePage(),
       
       onGenerateRoute: ( RouteSettings settings) {
         switch(settings.name){
@@ -34,6 +30,11 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const BotonesPage());
           case '/images':
             return MaterialPageRoute(builder: (context) => const ImagesPage());
+          case '/argumentos':
+            return MaterialPageRoute(
+              settings: settings,
+              builder: (context) =>  Argumentos()
+              );
           default:
             return MaterialPageRoute(builder: (context) => const HomePage());
         }
